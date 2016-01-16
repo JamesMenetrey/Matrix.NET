@@ -11,6 +11,7 @@ namespace Binarysharp.Tests
         public void CreateMatrixWithIntegerArrays()
         {
             // Arrange
+            Matrix<int> matrix = null;
             var values = new[]
             {
                 new[] {1, 0, 0},
@@ -21,13 +22,14 @@ namespace Binarysharp.Tests
             try
             {
                 // Act
-                var matrix = new Matrix<int>(values);
+                matrix = new Matrix<int>(values);
             }
             catch (Exception ex)
             {
                 Assert.Fail("The matrix couldn't be created with valid arrays of integers. {0}", ex);
             }
 
+            Assert.IsNotNull(matrix);
         }
 
         [TestMethod]
@@ -44,6 +46,9 @@ namespace Binarysharp.Tests
 
             // Act
             var matrix = new Matrix<int>(values);
+
+            // Assert
+            Assert.IsNotNull(matrix);
         }
     }
 }
