@@ -34,7 +34,7 @@ namespace Binarysharp.Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException), "The matrix cannot be created with an unbalanced number of values.")]
-        public void CreateMatrixWithNotProperSizedValues()
+        public void CreateMatrixWithUnbalancedValues()
         {
             // Arrange
             var values = new[]
