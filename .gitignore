@@ -2,11 +2,6 @@
 [Bb]in/
 [Oo]bj/
 
-# mstest test/results
-MemorySharpTests/bin/
-MemorySharpDirtyTests
-TestResults
-
 # Useless extensions
 *.zip
 *.rar
