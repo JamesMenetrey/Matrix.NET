@@ -3,7 +3,9 @@ A .NET implementation of matrices and their operations.
 
 ## Mathematical definition
 
-> In mathematics, a matrix (plural matrices) is a rectangular array of numbers, symbols, or expressions, arranged in rows and columns.
+> In mathematics, a matrix (plural matrices) is a rectangular array of numbers, symbols, or expressions.
+> The numbers, symbols or expressions in the matrix are called its *entries* or its *elements*. The horizontal and vertical lines of entries in a matrix are called *rows* and *columns*, respectively.
+>
 > *from [Wikipedia](https://en.wikipedia.org/wiki/Matrix_(mathematics))*
 
 Matrices are commonly written in box brackets or large parentheses:
@@ -14,26 +16,26 @@ Matrices are commonly written in box brackets or large parentheses:
 
 ### Matrices creation
 
-#### Static values
-A matrix can be created using a multidimentional array of values.
+#### Using static elements
+A matrix can be created using a multidimentional array of elements.
 
 ```
-var values = new[,]
+var elements = new[,]
 {
     {1, 0, 0},
     {0, 1, 0},
     {0, 0, 1}
 };
 
-matrix = new Matrix<int>(values);
+matrix = new Matrix<int>(elements);
 ```
 
 This creates an identity matric of size 3.
 
 
 
-#### Builder method
-A matrix can be created using a builder method, delegating the process of creating the set of values to another object.
+#### Using a builder method
+A matrix can be created using a builder method, delegating the process of creating the set of elements to another object.
 
 ```
 Func<int, int, int> delegateBuilder = (i, j) => i == j ? 1 : 0;

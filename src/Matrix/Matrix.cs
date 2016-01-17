@@ -18,34 +18,34 @@ namespace Binarysharp.Maths
     public class Matrix<T>
     {
         /// <summary>
-        /// The values of the matrix.
+        /// The elements of the matrix.
         /// </summary>
-        private T[,] _values;
+        private T[,] _elements;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Matrix{T}"/> class with a multidimensional array of values.
+        /// Initializes a new instance of the <see cref="Matrix{T}"/> class with a multidimensional array of elements.
         /// </summary>
-        /// <param name="values">The values of the matrix.</param>
+        /// <param name="elements">The elements of the matrix.</param>
         /// <exception cref="System.ArgumentNullException"></exception>
         /// <exception cref="System.ArgumentOutOfRangeException">
         /// The matrix cannot be empty.
         /// or
         /// The structure of the matrix is unbalanced.
         /// </exception>
-        public Matrix(T[,] values)
+        public Matrix(T[,] elements)
         {
-            if (values == null) throw new ArgumentNullException(nameof(values));
-            if (values.Length == 0) throw new ArgumentOutOfRangeException(nameof(values), "The matrix cannot be empty.");
+            if (elements == null) throw new ArgumentNullException(nameof(elements));
+            if (elements.Length == 0) throw new ArgumentOutOfRangeException(nameof(elements), "The matrix cannot be empty.");
 
-            _values = values;
+            _elements = elements;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Matrix{T}"/> class using a builder method that provides values.
+        /// Initializes a new instance of the <see cref="Matrix{T}"/> class using a builder method that provides elements.
         /// </summary>
         /// <param name="rowNumber">The number of rows of the matrix.</param>
         /// <param name="columnNumber">The number of columns of the matrix.</param>
-        /// <param name="builder">A method that builds the values.
+        /// <param name="builder">A method that builds the elements.
         /// The first parameter is the identifier of the row and the second one is the identifier of the column.
         /// </param>
         /// <exception cref="System.ArgumentOutOfRangeException">
@@ -60,7 +60,7 @@ namespace Binarysharp.Maths
             if (columnNumber <= 0) throw new ArgumentOutOfRangeException(nameof(rowNumber), "The number of columns must be above 0.");
             if (builder == null) throw new ArgumentNullException(nameof(builder));
 
-            _values = CreateValueArrayFromBuilder(rowNumber, columnNumber, builder);
+            _elements = CreateElementsArrayFromBuilder(rowNumber, columnNumber, builder);
         }
 
         /// <summary>
@@ -68,23 +68,23 @@ namespace Binarysharp.Maths
         /// </summary>
         /// <param name="rowNumber">The row number.</param>
         /// <param name="columnNumber">The column number.</param>
-        /// <param name="builder">A method that builds the values.
+        /// <param name="builder">A method that builds the elements.
         /// The first parameter is the identifier of the row and the second one is the identifier of the column.
         /// </param>
-        /// <returns>The return value is a multidimensional array of the values.</returns>
-        private T[,] CreateValueArrayFromBuilder(int rowNumber, int columnNumber, Func<int, int, T> builder)
+        /// <returns>The return value is a multidimensional array of elements.</returns>
+        private T[,] CreateElementsArrayFromBuilder(int rowNumber, int columnNumber, Func<int, int, T> builder)
         {
-            var values = new T[rowNumber, columnNumber];
+            var elements = new T[rowNumber, columnNumber];
 
             for (int i = 0; i < rowNumber; i++)
             {
                 for (int j = 0; j < columnNumber; j++)
                 {
-                    values[i, j] = builder(i, j);
+                    elements[i, j] = builder(i, j);
                 }
             }
 
-            return values;
+            return elements;
         }
     }
 }

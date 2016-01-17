@@ -12,7 +12,7 @@ namespace Binarysharp.Tests
         {
             // Arrange
             Matrix<int> matrix = null;
-            var values = new[,]
+            var elements = new[,]
             {
                 {1, 0, 0},
                 {0, 1, 0},
@@ -22,7 +22,7 @@ namespace Binarysharp.Tests
             try
             {
                 // Act
-                matrix = new Matrix<int>(values);
+                matrix = new Matrix<int>(elements);
             }
             catch (Exception ex)
             {
