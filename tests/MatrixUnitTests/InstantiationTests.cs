@@ -37,7 +37,7 @@ namespace Binarysharp.Tests
         {
             // Arrange
             Matrix<int> matrix = null;
-            Func<int, int, int> delegateBuilder = (i, j) => i*10 + j;
+            Func<int, int, int> delegateBuilder = (i, j) => i == j ? 1 : 0;
 
             // Act
 
