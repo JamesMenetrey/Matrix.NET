@@ -7,20 +7,18 @@
 */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Binarysharp.Maths
 {
     /// <summary>
     /// Represents an immutable matrix data type.
     /// </summary>
-    public class Matrix<T>
+    public partial class Matrix<T>
     {
         /// <summary>
         /// The elements of the matrix.
         /// </summary>
-        private T[,] _elements;
+        private readonly T[,] _elements;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Matrix{T}"/> class with a multidimensional array of elements.
