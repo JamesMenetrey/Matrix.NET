@@ -52,7 +52,7 @@ The elements can be reteieved using the indexer of the matrix object.
 ```c#
 var i = 0, j = 0;
 
-var FirstElement = matrix[i, j];
+var firstElement = matrix[i, j];
 ```
 
 
