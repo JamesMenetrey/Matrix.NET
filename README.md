@@ -12,7 +12,7 @@ Matrices are commonly written in box brackets or large parentheses:
 
 ![matrix definition image](https://upload.wikimedia.org/math/b/9/7/b9783fc03537756fb8e065c055f73d93.png "Matrix definition")
 
-## Features
+## API usage
 
 ### Matrices creation
 
@@ -30,7 +30,7 @@ var elements = new[,]
 matrix = new Matrix<int>(elements);
 ```
 
-This creates an identity matric of size 3.
+This creates an identity matrix of size 3.
 
 
 
@@ -43,7 +43,17 @@ Func<int, int, int> delegateBuilder = (i, j) => i == j ? 1 : 0;
 matrix = new Matrix<int>(3, 3, delegateBuilder);
 ```
 
-This creates an identity matric of size 3.
+This creates an identity matrix of size 3.
+
+### Retrieve elements
+
+The elements can be reteieved using the indexer of the matrix object.
+
+```c#
+var i = 0, j = 0;
+
+var FirstElement = matrix[i, j];
+```
 
 
 ## Code convention
