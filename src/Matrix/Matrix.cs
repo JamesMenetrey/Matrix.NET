@@ -13,12 +13,22 @@ namespace Binarysharp.Maths
     /// <summary>
     /// Represents an immutable matrix data type.
     /// </summary>
-    public partial class Matrix<T>
+    public partial class Matrix<T> : IEquatable<Matrix<T>>
     {
         /// <summary>
         /// The elements of the matrix.
         /// </summary>
         private readonly T[,] _elements;
+
+        /// <summary>
+        /// Gets the number of columns of the matrix.
+        /// </summary>
+        public int NumberOfColumns => _elements.GetLength(1);
+
+        /// <summary>
+        /// Gets the number of rows of the matrix.
+        /// </summary>
+        public int NumberOfRows => _elements.GetLength(0);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Matrix{T}"/> class with a multidimensional array of elements.

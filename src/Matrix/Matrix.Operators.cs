@@ -12,5 +12,27 @@
         /// <param name="j">The column index.</param>
         /// <returns>T.</returns>
         public T this[int i, int j] => _elements[i, j];
+
+        /// <summary>
+        /// Compares two matrices and returns <c>true</c> if the matrices are equal, <c>false</c> otherwise.
+        /// </summary>
+        /// <param name="left">The left matrix.</param>
+        /// <param name="right">The right matrix.</param>
+        /// <returns>The return value is <c>true</c> if the matrices are equal, <c>false</c> otherwise.</returns>
+        public static bool operator ==(Matrix<T> left, Matrix<T> right)
+        {
+            return Equals(left, right);
+        }
+
+        /// <summary>
+        /// Compares two matrices and returns <c>true</c> if the matrices are different, <c>false</c> otherwise.
+        /// </summary>
+        /// <param name="left">The left matrix.</param>
+        /// <param name="right">The right matrix.</param>
+        /// <returns>The return value is <c>true</c> if the matrices are different, <c>false</c> otherwise.</returns>
+        public static bool operator !=(Matrix<T> left, Matrix<T> right)
+        {
+            return !Equals(left, right);
+        }
     }
 }
