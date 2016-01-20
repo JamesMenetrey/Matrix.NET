@@ -42,8 +42,10 @@
   <ItemGroup>
     <Compile Include="Matrix.cs" />
     <Compile Include="Matrix.Equality.cs" />
-    <Compile Include="Matrix.Operators.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Operations\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

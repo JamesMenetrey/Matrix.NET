@@ -21,6 +21,14 @@ namespace Binarysharp.Maths
         private readonly T[,] _elements;
 
         /// <summary>
+        /// Gets the element of type <see cref="T"/> at i and j index.
+        /// </summary>
+        /// <param name="i">The row index.</param>
+        /// <param name="j">The column index.</param>
+        /// <returns>T.</returns>
+        public T this[int i, int j] => _elements[i, j];
+
+        /// <summary>
         /// Gets the number of columns of the matrix.
         /// </summary>
         public int NumberOfColumns => _elements.GetLength(1);
