@@ -15,7 +15,7 @@ namespace Binarysharp.Maths.Exceptions
         /// <param name="right">The second matrix.</param>
         public DimensionsMismatchException(Matrix<T> left, Matrix<T> right)
             : base(
-                $"The matrices have have a different dimension (left {left.NumberOfRows}x{left.NumberOfColumns}; right {right.NumberOfRows}x{right.NumberOfColumns})."
+                $"The matrices have have different dimensions (left {left.NumberOfRows}x{left.NumberOfColumns}; right {right.NumberOfRows}x{right.NumberOfColumns})."
                 )
         {
         }
