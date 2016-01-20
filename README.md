@@ -45,7 +45,9 @@ matrix = new Matrix<int>(3, 3, delegateBuilder);
 
 This creates an identity matrix of size 3.
 
-### Retrieve elements
+### Interacting with elements
+
+#### Retrieving
 
 The elements can be reteieved using the indexer of the matrix object.
 
@@ -53,6 +55,13 @@ The elements can be reteieved using the indexer of the matrix object.
 var i = 0, j = 0;
 
 var firstElement = matrix[i, j];
+```
+
+#### Number of columns/rows
+
+```c#
+var ith = matrix.NumberOfRows;
+var jth = matrix.NumberOfColumns;
 ```
 
 
