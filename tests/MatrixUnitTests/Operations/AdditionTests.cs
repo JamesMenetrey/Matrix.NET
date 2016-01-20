@@ -3,13 +3,13 @@ using Binarysharp.Maths;
 using Binarysharp.Maths.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Binarysharp.Tests
+namespace Binarysharp.Tests.Operations
 {
     [TestClass]
     public class AdditionTests
     {
         [TestMethod]
-        public void SumTwoMatricesWithSameSize()
+        public void SumTwoMatricesWithSameDimension()
         {
             // Arrange
             var left = new Matrix<int>(new[,]
@@ -36,12 +36,12 @@ namespace Binarysharp.Tests
             var sum = left + right;
 
             // Assert
-            Assert.IsTrue(expected == sum, "The sum of the matrices does not match with the expected result.");
+            Assert.IsTrue(expected == sum, "The result of the sum of the matrices does not match with the expected result.");
         }
 
         [TestMethod]
-        [ExpectedException(typeof(DimensionsMismatchException<int>), "The two matrices cannot be additioned because they don't have the same size.")]
-        public void SumTwoMatricesWithDifferentRowSize()
+        [ExpectedException(typeof(DimensionsMismatchException<int>), "The two matrices cannot be additioned because they don't have the same dimension.")]
+        public void SumTwoMatricesWithDifferentRowDimension()
         {
             // Arrange
             var left = new Matrix<int>(new[,]
@@ -63,8 +63,8 @@ namespace Binarysharp.Tests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(DimensionsMismatchException<int>), "The two matrices cannot be additioned because they don't have the same size.")]
-        public void SumTwoMatricesWithDifferentColumnSize()
+        [ExpectedException(typeof(DimensionsMismatchException<int>), "The two matrices cannot be additioned because they don't have the same dimension.")]
+        public void SumTwoMatricesWithDifferentColumnDimension()
         {
             // Arrange
             var left = new Matrix<int>(new[,]

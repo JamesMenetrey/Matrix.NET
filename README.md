@@ -72,6 +72,11 @@ var jth = matrix.NumberOfColumns;
 var sum = matrix1 + matrix2;
 ```
 
+#### Multiplication by a scalar value
+
+```c#
+var product = matrix * scalarValue;
+```
 
 ## Code convention
 The project is written in respect of the rules normalized by Microsoft for C# programming and ReSharper convention. Please, be compliant to those rules when contributing.
