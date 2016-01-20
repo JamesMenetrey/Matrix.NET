@@ -64,6 +64,14 @@ var ith = matrix.NumberOfRows;
 var jth = matrix.NumberOfColumns;
 ```
 
+### Basic operations
+
+#### Addition
+
+```c#
+var sum = matrix1 + matrix2;
+```
+
 
 ## Code convention
 The project is written in respect of the rules normalized by Microsoft for C# programming and ReSharper convention. Please, be compliant to those rules when contributing.
