@@ -44,6 +44,7 @@
     <Compile Include="Matrix.cs" />
     <Compile Include="Matrix.Equality.cs" />
     <Compile Include="Operations\Matrix.Addition.cs" />
+    <Compile Include="Operations\Matrix.Determinant.cs" />
     <Compile Include="Operations\Matrix.ScalarMultiplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

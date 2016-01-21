@@ -61,7 +61,7 @@ namespace Binarysharp.Tests.Operations
         }
 
         [TestMethod]
-        [ExpectedException(typeof (ArgumentException), "Incorrect dimensions for a matrix multiplicatrion.")]
+        [ExpectedException(typeof (ArgumentException), "Incorrect dimensions for a matrix multiplication.")]
         public void Multiplay3X2And3X2()
         {
             // Arrange
