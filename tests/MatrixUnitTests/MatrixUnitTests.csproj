@@ -55,6 +55,7 @@
     <Compile Include="InstantiationTests.cs" />
     <Compile Include="EqualityTests.cs" />
     <Compile Include="Operations\ScalarMultiplicationTests.cs" />
+    <Compile Include="Operations\MatrixMultiplicationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ElementsTests.cs" />
     <Compile Include="Operations\AdditionTests.cs" />

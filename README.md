@@ -78,6 +78,12 @@ var sum = matrix1 + matrix2;
 var product = matrix * scalarValue;
 ```
 
+#### Multiplication by matrices
+
+```c#
+var matrixResult = matrixLeft * matrixRight;
+```
+
 ## Code convention
 The project is written in respect of the rules normalized by Microsoft for C# programming and ReSharper convention. Please, be compliant to those rules when contributing.
 
